@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "project": "Castle Fight",
+  "policy": {
+    "twoConceptsRequired": true,
+    "selectionApprovesConceptOnly": true,
+    "paidCallsRequireSeparateUserApproval": true,
+    "batch3dAllowed": false
+  },
+  "assets": [
+    {
+      "assetId": "human_knight",
+      "category": "units",
+      "configId": "Knight",
+      "faction": "Human",
+      "name": "Knight",
+      "selectionPath": "assets/concepts/units/human_knight/selection.json",
+      "conceptStatus": "approved",
+      "selected": "A",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_001.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/human_knight/variant_A.png",
+        "B": "assets/concepts/units/human_knight/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "A",
+        "sha256": "a6bb9854af5a7e185581826bab0570ca31dbf76d5c28acfe2bf26a2cc897952b",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:23:52.147Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/human_knight/variant_A.png",
+      "modelStatus": "model_ready",
+      "modelTaskId": "01a1b89e-d28b-76c6-be63-1c73e0706249",
+      "modelReceipt": "assets/models/units/human_knight/task.json",
+      "modelQualityStatus": "needs_manual_revision",
+      "modelMetadataPath": "assets/models/units/human_knight/metadata.json",
+      "modelFiles": {
+        "glb": "assets/models/units/human_knight/model.glb",
+        "fbx": "assets/models/units/human_knight/model.fbx",
+        "texture": "assets/models/units/human_knight/model_base_color.png",
+        "preview": "assets/models/units/human_knight/preview.png"
+      },
+      "localTestPreparation": {
+        "scenePath": "assets/tests/human_knight/KnightVisualTest.rbxlx",
+        "instructionsPath": "docs/KNIGHT_STUDIO_TEST.md",
+        "metadataPath": "assets/tests/human_knight/scene-metadata.json",
+        "bodyImported": false,
+        "studioImportVerified": false,
+        "targetHeightStuds": 5,
+        "sizeStatus": "proposal_for_visual_test_only",
+        "weapons": "separate_static_Parts_models",
+        "riggingPerformed": false,
+        "liveSessionObservation": {
+          "scene": "KnightVisualTest.rbxlx",
+          "bodyImported": true,
+          "polishApplied": true,
+          "reportPath": "assets/tests/human_knight/polish-v1-report.json",
+          "observedMeshId": "rbxassetid://92061902066137",
+          "height": 5,
+          "feetY": 0.25,
+          "padTopY": 0.25,
+          "placeFileOverwritten": false
+        }
+      }
+    },
+    {
+      "assetId": "human_archer",
+      "category": "units",
+      "configId": "Archer",
+      "faction": "Human",
+      "name": "Archer",
+      "selectionPath": "assets/concepts/units/human_archer/selection.json",
+      "conceptStatus": "approved",
+      "selected": "A",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_002.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/human_archer/variant_A.png",
+        "B": "assets/concepts/units/human_archer/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "A",
+        "sha256": "6b877426c43bd4da2869154d42cce07b30e9d4c71bd7adb38eb7ddcddb116ad8",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:41:24.020Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/human_archer/variant_A.png"
+    },
+    {
+      "assetId": "human_mage",
+      "category": "units",
+      "configId": "Mage",
+      "faction": "Human",
+      "name": "Mage",
+      "selectionPath": "assets/concepts/units/human_mage/selection.json",
+      "conceptStatus": "approved",
+      "selected": "A",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_002.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/human_mage/variant_A.png",
+        "B": "assets/concepts/units/human_mage/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "A",
+        "sha256": "4b0da39b150bd75bc41b9b80d81e0cc1cccf24970cc4cb668643d05adf6b5722",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:41:24.058Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/human_mage/variant_A.png"
+    },
+    {
+      "assetId": "undead_giant",
+      "category": "units",
+      "configId": "Giant",
+      "faction": "Undead",
+      "name": "Giant",
+      "selectionPath": "assets/concepts/units/undead_giant/selection.json",
+      "conceptStatus": "approved",
+      "selected": "B",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_001.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/undead_giant/variant_A.png",
+        "B": "assets/concepts/units/undead_giant/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "B",
+        "sha256": "1280299c990115d9bef06a8157595452a9ef277bf38daa5249688700cc9b1b3f",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:23:52.179Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/undead_giant/variant_B.png"
+    },
+    {
+      "assetId": "undead_skeleton_archer",
+      "category": "units",
+      "configId": "SkeletonArcher",
+      "faction": "Undead",
+      "name": "SkeletonArcher",
+      "selectionPath": "assets/concepts/units/undead_skeleton_archer/selection.json",
+      "aliases": [
+        "undead_archer"
+      ],
+      "conceptStatus": "approved",
+      "selected": "A",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_002.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/undead_skeleton_archer/variant_A.png",
+        "B": "assets/concepts/units/undead_skeleton_archer/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "A",
+        "sha256": "c77b4047da9ed8a0e9ebbd16ee10bf15f6f9d8852ffb442d35130188bab94f02",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:41:24.093Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/undead_skeleton_archer/variant_A.png"
+    },
+    {
+      "assetId": "undead_necromancer",
+      "category": "units",
+      "configId": "Necromancer",
+      "faction": "Undead",
+      "name": "Necromancer",
+      "selectionPath": "assets/concepts/units/undead_necromancer/selection.json",
+      "conceptStatus": "approved",
+      "selected": "B",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_002.json",
+      "conceptImages": {
+        "A": "assets/concepts/units/undead_necromancer/variant_A.png",
+        "B": "assets/concepts/units/undead_necromancer/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "B",
+        "sha256": "d6b9583675ed956a7c3c3dc883ac0d1da902e9a8b912ffaa485af4403c15b49b",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:41:24.128Z"
+      },
+      "selectedConceptPath": "assets/concepts/units/undead_necromancer/variant_B.png"
+    },
+    {
+      "assetId": "human_barracks",
+      "category": "buildings",
+      "configId": "KnightBarracks",
+      "faction": "Human",
+      "name": "Human Barracks",
+      "selectionPath": "assets/concepts/buildings/human_barracks/selection.json",
+      "aliases": [
+        "human_knight_barracks"
+      ],
+      "conceptStatus": "approved",
+      "selected": "B",
+      "conceptGenerationRun": "docs/CONCEPT_RUN_001.json",
+      "conceptImages": {
+        "A": "assets/concepts/buildings/human_barracks/variant_A.png",
+        "B": "assets/concepts/buildings/human_barracks/variant_B.png"
+      },
+      "approval": {
+        "status": "approved",
+        "variant": "B",
+        "sha256": "db9d31f978614032733b9a3b7e3ee13011d4de1578a994482413340d707f8dfc",
+        "approvedBy": "user",
+        "approvedAt": "2026-11-08T00:23:52.208Z"
+      },
+      "selectedConceptPath": "assets/concepts/buildings/human_barracks/variant_B.png"
+    },
+    {
+      "assetId": "human_archer_tower",
+      "category": "buildings",
+      "configId": "ArcherTower",
+      "faction": "Human",
+      "name": "ArcherTower",
+      "selectionPath": "assets/concepts/buildings/human_archer_tower/selection.json"
+    },
+    {
+      "assetId": "human_mage_academy",
+      "category": "buildings",
+      "configId": "MageAcademy",
+      "faction": "Human",
+      "name": "MageAcademy",
+      "selectionPath": "assets/concepts/buildings/human_mage_academy/selection.json"
+    },
+    {
+      "assetId": "human_light_sanctuary",
+      "category": "buildings",
+      "configId": "LightSanctuary",
+      "faction": "Human",
+      "name": "LightSanctuary",
+      "selectionPath": "assets/concepts/buildings/human_light_sanctuary/selection.json"
+    },
+    {
+      "assetId": "undead_giant_graveyard",
+      "category": "buildings",
+      "configId": "GiantGraveyard",
+      "faction": "Undead",
+      "name": "GiantGraveyard",
+      "selectionPath": "assets/concepts/buildings/undead_giant_graveyard/selection.json"
+    },
+    {
+      "assetId": "undead_bone_tower",
+      "category": "buildings",
+      "configId": "BoneTower",
+      "faction": "Undead",
+      "name": "BoneTower",
+      "selectionPath": "assets/concepts/buildings/undead_bone_tower/selection.json"
+    },
+    {
+      "assetId": "undead_necromancer_crypt",
+      "category": "buildings",
+      "configId": "NecromancerCrypt",
+      "faction": "Undead",
+      "name": "NecromancerCrypt",
+      "selectionPath": "assets/concepts/buildings/undead_necromancer_crypt/selection.json"
+    },
+    {
+      "assetId": "undead_cursed_obelisk",
+      "category": "buildings",
+      "configId": "CursedObelisk",
+      "faction": "Undead",
+      "name": "CursedObelisk",
+      "selectionPath": "assets/concepts/buildings/undead_cursed_obelisk/selection.json"
+    },
+    {
+      "assetId": "human_castle",
+      "category": "castles",
+      "configId": null,
+      "faction": "Human",
+      "name": "Human Castle",
+      "selectionPath": "assets/concepts/castles/human_castle/selection.json"
+    },
+    {
+      "assetId": "undead_castle",
+      "category": "castles",
+      "configId": null,
+      "faction": "Undead",
+      "name": "Undead Castle",
+      "selectionPath": "assets/concepts/castles/undead_castle/selection.json"
+    }
+  ],
+  "universalPreparation": {
+    "configPath": "assets/asset-preparation.json",
+    "documentation": "docs/UNIVERSAL_ASSET_PIPELINE.md",
+    "packagePath": "assets/tests/universal/AssetTools.rbxmx",
+    "bootstrapPlace": "assets/tests/universal/AssetVisualTest.rbxlx",
+    "validationReport": "assets/tests/universal/validation-report.json",
+    "liveSceneRoot": "Workspace.AssetVisualTest",
+    "newFileImportPerformed": false,
+    "riggingPerformed": false
+  }
+}

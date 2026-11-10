@@ -1,0 +1,74 @@
+{
+    "name":  "CastleFightLobby23",
+    "servePort":  34878,
+    "servePlaceIds":  [
+                          0
+                      ],
+    "tree":  {
+                 "$className":  "DataModel",
+                 "$ignoreUnknownInstances":  true,
+                 "ServerStorage":  {
+                                       "$className":  "ServerStorage",
+                                       "$ignoreUnknownInstances":  true,
+                                       "CastleFightArena17ATools":  {
+                                                                        "$className":  "Folder",
+                                                                        "$ignoreUnknownInstances":  true,
+                                                                        "MapBuilder":  {
+                                                                                           "$path":  "tools/studio/MapBuilder.luau"
+                                                                                       },
+                                                                        "ArenaVisuals":  {
+                                                                                             "$path":  "tools/studio/ArenaVisuals.luau"
+                                                                                         },
+                                                                        "TestArena17A":  {
+                                                                                             "$path":  "tools/studio/TestArena17A.luau"
+                                                                                         },
+                                                                        "TestArena17BGameplay":  {
+                                                                                                     "$path":  "tools/studio/TestArena17BGameplay.luau"
+                                                                                                 },
+                                                                        "ArenaExpansion":  {
+                                                                                               "$path":  "tools/studio/ArenaExpansion.luau"
+                                                                                           },
+                                                                        "TestArena19":  {
+                                                                                            "$path":  "tools/studio/TestArena19.luau"
+                                                                                        },
+                                                                        "Arena20Correction":  {
+                                                                                                  "$path":  "tools/studio/Arena20Correction.luau"
+                                                                                              },
+                                                                        "MapConfig":  {
+                                                                                          "$path":  "src/shared/Config/MapConfig.luau"
+                                                                                      },
+                                                                        "TestArena20":  {
+                                                                                            "$path":  "tools/studio/TestArena20.luau"
+                                                                                        }
+                                                                    }
+                                   },
+                 "ReplicatedStorage":  {
+                                           "$className":  "ReplicatedStorage",
+                                           "$ignoreUnknownInstances":  true,
+                                           "CastleFightShared":  {
+                                                                     "$path":  "src/shared",
+                                                                     "$ignoreUnknownInstances":  true
+                                                                 }
+                                       },
+                 "ServerScriptService":  {
+                                             "$className":  "ServerScriptService",
+                                             "$ignoreUnknownInstances":  true,
+                                             "CastleFightServer":  {
+                                                                       "$path":  "src/server",
+                                                                       "$ignoreUnknownInstances":  true
+                                                                   }
+                                         },
+                 "StarterPlayer":  {
+                                       "$className":  "StarterPlayer",
+                                       "$ignoreUnknownInstances":  true,
+                                       "StarterPlayerScripts":  {
+                                                                    "$className":  "StarterPlayerScripts",
+                                                                    "$ignoreUnknownInstances":  true,
+                                                                    "CastleFightClient":  {
+                                                                                              "$path":  "src/client",
+                                                                                              "$ignoreUnknownInstances":  true
+                                                                                          }
+                                                                }
+                                   }
+             }
+}

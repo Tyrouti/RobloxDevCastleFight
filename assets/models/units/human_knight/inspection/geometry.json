@@ -1,0 +1,181 @@
+{
+  "input": "C:\\roblox\\castleFight\\assets\\models\\units\\human_knight\\model.glb",
+  "sha256": "462353370a5e38030e46ee5d74d580fa0557fc8f5ef614c018012f84bcb15a6d",
+  "bytes": 2790672,
+  "glTFVersion": "2.0",
+  "triangleCount": 1576,
+  "vertexCount": 2019,
+  "meshCount": 1,
+  "meshNodeCount": 1,
+  "nodeCount": 1,
+  "primitives": [
+    {
+      "node": 0,
+      "mesh": 0,
+      "primitive": 0,
+      "vertices": 2019,
+      "triangles": 1576,
+      "hasUV": true,
+      "hasNormals": true,
+      "material": 0
+    }
+  ],
+  "nodeRecords": [
+    {
+      "index": 0,
+      "name": "geometry_0",
+      "mesh": 0
+    }
+  ],
+  "bounds": {
+    "min": [
+      -0.4787600040435791,
+      -0.4440920054912567,
+      -0.15161100029945374
+    ],
+    "max": [
+      0.4787600040435791,
+      0.44213899970054626,
+      0.1462399959564209
+    ],
+    "size": [
+      0.9575200080871582,
+      0.886231005191803,
+      0.29785099625587463
+    ]
+  },
+  "connectedComponents": [
+    {
+      "id": 0,
+      "triangles": 1488,
+      "vertices": 1876,
+      "nodes": [
+        0
+      ],
+      "bounds": {
+        "min": [
+          -0.4787600040435791,
+          -0.4440920054912567,
+          -0.15161100029945374
+        ],
+        "max": [
+          0.4787600040435791,
+          0.44213899970054626,
+          0.1462399959564209
+        ],
+        "size": [
+          0.9575200080871582,
+          0.886231005191803,
+          0.29785099625587463
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "triangles": 44,
+      "vertices": 72,
+      "nodes": [
+        0
+      ],
+      "bounds": {
+        "min": [
+          -0.1472170054912567,
+          -0.21166999638080597,
+          -0.0993650034070015
+        ],
+        "max": [
+          -0.05200200155377388,
+          -0.11743199825286865,
+          0.09887699782848358
+        ],
+        "size": [
+          0.09521500393748283,
+          0.09423799812793732,
+          0.19824200123548508
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "triangles": 44,
+      "vertices": 71,
+      "nodes": [
+        0
+      ],
+      "bounds": {
+        "min": [
+          0.05200200155377388,
+          -0.21166999638080597,
+          -0.0993650034070015
+        ],
+        "max": [
+          0.14331099390983582,
+          -0.11743199825286865,
+          0.09887699782848358
+        ],
+        "size": [
+          0.09130899235606194,
+          0.09423799812793732,
+          0.19824200123548508
+        ]
+      }
+    }
+  ],
+  "weldTolerance": 9.57520008087158e-7,
+  "degenerateTriangles": 0,
+  "duplicateTriangles": 0,
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 1,
+        "metallicFactor": 0
+      },
+      "doubleSided": true
+    }
+  ],
+  "images": [
+    {
+      "index": 0,
+      "mimeType": "image/png",
+      "path": "textures/image_0.png",
+      "bytes": 2705592,
+      "sha256": "5f330ed6f38497c5ec093ad87ee9f201e72ce1cb63b19d93d83ecfbbb9cd57ec",
+      "width": 2048,
+      "height": 2048,
+      "decodeError": null
+    }
+  ],
+  "skinCount": 0,
+  "animationCount": 0,
+  "warnings": [
+    "Target 1500 triangles exceeded",
+    "Multiple disconnected components: inspect intended armor/weapons versus stray fragments"
+  ],
+  "limitations": [
+    "Connectivity uses spatial welding; close contact can merge separate surfaces.",
+    "Orthographic CPU previews are inspection views, not the provider preview; no normal maps or full PBR shader.",
+    "Skinning/deformation, exact physical thickness, self-intersections and Roblox import not validated.",
+    "Component identity (sword/shield/body) requires visual interpretation; no mesh edits performed."
+  ],
+  "support": {
+    "assumedUpAxis": "Y",
+    "leftHalfMinY": -0.4440920054912567,
+    "rightHalfMinY": -0.4440920054912567,
+    "footLevelDifference": 0,
+    "bottomAtOrigin": false,
+    "normalization": {
+      "centerXZ": [
+        0,
+        -0.0026855021715164185
+      ],
+      "translateYToGround": 0.4440920054912567,
+      "uniformScaleFormula": "desiredHeightInStuds / 0.886231005191803",
+      "desiredHeightInStuds": null
+    }
+  }
+}

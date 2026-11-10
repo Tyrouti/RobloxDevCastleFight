@@ -1,0 +1,277 @@
+{
+  "assetId": "human_knight",
+  "conceptVariant": "A",
+  "taskId": "01a1b89e-d28b-76c6-be63-1c73e0706249",
+  "status": "model_ready",
+  "qualityStatus": "needs_manual_revision",
+  "approvedForGameplay": false,
+  "modelUserApproval": "pending",
+  "actualCredits": 15,
+  "requests": 1,
+  "sourceImage": "assets/concepts/units/human_knight/variant_A.png",
+  "sourceSHA256": "a6bb9854af5a7e185581826bab0570ca31dbf76d5c28acfe2bf26a2cc897952b",
+  "settings": {
+    "ai_model": "meshy-t2.5",
+    "model_type": "smart-topology",
+    "target_polycount": 1500,
+    "should_texture": true,
+    "texture_model": "meshy-n1",
+    "texture_resolution": "2k",
+    "target_formats": [
+      "glb",
+      "fbx"
+    ],
+    "pose_mode": "t-pose",
+    "file_path": "C:/roblox/castleFight/assets/concepts/units/human_knight/variant_A.png",
+    "response_format": "json"
+  },
+  "geometry": {
+    "triangleCount": 1576,
+    "targetTriangles": 1500,
+    "overBudgetTriangles": 76,
+    "overBudgetPercent": 5.066666666666664,
+    "vertexCount": 2019,
+    "meshCount": 1,
+    "connectedComponents": [
+      {
+        "id": 0,
+        "triangles": 1488,
+        "vertices": 1876,
+        "nodes": [
+          0
+        ],
+        "bounds": {
+          "min": [
+            -0.4787600040435791,
+            -0.4440920054912567,
+            -0.15161100029945374
+          ],
+          "max": [
+            0.4787600040435791,
+            0.44213899970054626,
+            0.1462399959564209
+          ],
+          "size": [
+            0.9575200080871582,
+            0.886231005191803,
+            0.29785099625587463
+          ]
+        }
+      },
+      {
+        "id": 1,
+        "triangles": 44,
+        "vertices": 72,
+        "nodes": [
+          0
+        ],
+        "bounds": {
+          "min": [
+            -0.1472170054912567,
+            -0.21166999638080597,
+            -0.0993650034070015
+          ],
+          "max": [
+            -0.05200200155377388,
+            -0.11743199825286865,
+            0.09887699782848358
+          ],
+          "size": [
+            0.09521500393748283,
+            0.09423799812793732,
+            0.19824200123548508
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "triangles": 44,
+        "vertices": 71,
+        "nodes": [
+          0
+        ],
+        "bounds": {
+          "min": [
+            0.05200200155377388,
+            -0.21166999638080597,
+            -0.0993650034070015
+          ],
+          "max": [
+            0.14331099390983582,
+            -0.11743199825286865,
+            0.09887699782848358
+          ],
+          "size": [
+            0.09130899235606194,
+            0.09423799812793732,
+            0.19824200123548508
+          ]
+        }
+      }
+    ],
+    "degenerateTriangles": 0,
+    "duplicateTriangles": 0,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "bounds": {
+      "min": [
+        -0.4787600040435791,
+        -0.4440920054912567,
+        -0.15161100029945374
+      ],
+      "max": [
+        0.4787600040435791,
+        0.44213899970054626,
+        0.1462399959564209
+      ],
+      "size": [
+        0.9575200080871582,
+        0.886231005191803,
+        0.29785099625587463
+      ]
+    },
+    "support": {
+      "assumedUpAxis": "Y",
+      "leftHalfMinY": -0.4440920054912567,
+      "rightHalfMinY": -0.4440920054912567,
+      "footLevelDifference": 0,
+      "bottomAtOrigin": false,
+      "normalization": {
+        "centerXZ": [
+          0,
+          -0.0026855021715164185
+        ],
+        "translateYToGround": 0.4440920054912567,
+        "uniformScaleFormula": "desiredHeightInStuds / 0.886231005191803",
+        "desiredHeightInStuds": null
+      }
+    }
+  },
+  "textures": {
+    "baseColor": "model_base_color.png",
+    "width": 2048,
+    "height": 2048,
+    "verified": true,
+    "metallicFactor": 0,
+    "roughnessFactor": 1,
+    "extraPBRMaps": false
+  },
+  "equipment": {
+    "sword": {
+      "present": false,
+      "separability": "not_applicable_missing"
+    },
+    "shield": {
+      "present": false,
+      "separability": "not_applicable_missing"
+    }
+  },
+  "rigging": {
+    "tPoseObserved": true,
+    "skins": 0,
+    "animations": 0,
+    "performed": false,
+    "assessment": "Candidate body for manual rigging; deformation, shoulder/elbow/knee topology and weights not tested. Detached hip plates need weight assignment."
+  },
+  "visualReview": {
+    "providerPreviewInspected": true,
+    "localViewsInspected": [
+      "front",
+      "side",
+      "back",
+      "components_front"
+    ],
+    "silhouette": "Body/helmet/colors recognizable; required sword and shield missing.",
+    "extraObjects": "One mesh node only. Two disconnected small components visually match hip armor plates.",
+    "thinDetails": "No obvious large needle-like details; exact wall thickness and deformation unverified."
+  },
+  "roblox": {
+    "status": "prototype_body_only_needs_revision",
+    "importTested": false,
+    "published": false,
+    "targetHeightStuds": null,
+    "normalization": {
+      "centerXZ": [
+        0,
+        -0.0026855021715164185
+      ],
+      "translateYToGround": 0.4440920054912567,
+      "uniformScaleFormula": "desiredHeightInStuds / 0.886231005191803",
+      "desiredHeightInStuds": null
+    }
+  },
+  "savedFiles": {
+    "model.glb": {
+      "path": "assets/models/units/human_knight/model.glb",
+      "bytes": 2790672,
+      "sha256": "462353370a5e38030e46ee5d74d580fa0557fc8f5ef614c018012f84bcb15a6d"
+    },
+    "model.fbx": {
+      "path": "assets/models/units/human_knight/model.fbx",
+      "bytes": 2784700,
+      "sha256": "6448184d6ce31fb47b1917db2f76c0dcdc07152adfc518068efa8c9a3165d95b"
+    },
+    "model_base_color.png": {
+      "path": "assets/models/units/human_knight/model_base_color.png",
+      "bytes": 2705589,
+      "sha256": "156736e1af1226aa13da3665a0d92e22d45521496c25963c48e85c1c088e5b45"
+    },
+    "preview.png": {
+      "path": "assets/models/units/human_knight/preview.png",
+      "bytes": 91141,
+      "sha256": "f2cc88af7a9ba210c6d9cc91d09ff3fc3824b184e47e70aa934a76e794bc8574"
+    },
+    "REVIEW.md": {
+      "path": "assets/models/units/human_knight/REVIEW.md",
+      "bytes": 9249,
+      "sha256": "90016d8fb665d92434dd1ec3e79987dc5afbd3f93f05d5ad9006f8816c22647b"
+    },
+    "inspection/geometry.json": {
+      "path": "assets/models/units/human_knight/inspection/geometry.json",
+      "bytes": 4190,
+      "sha256": "5757160bbd0abdb301346f7da6b7e9af6ad895811e87edc3fedc9c36e14bbc7b"
+    },
+    "inspection/front.png": {
+      "path": "assets/models/units/human_knight/inspection/front.png",
+      "bytes": 211214,
+      "sha256": "ab387cc1737f16d35ba2cc7be60838f04bc6d3e2fa3ba90c902a63a79aff59da"
+    },
+    "inspection/side.png": {
+      "path": "assets/models/units/human_knight/inspection/side.png",
+      "bytes": 163920,
+      "sha256": "7292d752d5e99d080825327f9f6a3e061ebb35d5c091a63bb1bc55483afc2051"
+    },
+    "inspection/back.png": {
+      "path": "assets/models/units/human_knight/inspection/back.png",
+      "bytes": 175164,
+      "sha256": "ea416cc03c22df885a3810572d9dc327fab6350a914555e84ca8826e7b6f1df0"
+    },
+    "inspection/three_quarter.png": {
+      "path": "assets/models/units/human_knight/inspection/three_quarter.png",
+      "bytes": 273016,
+      "sha256": "ad9dcf3be90e375fa7078db22070a7582a3dc77105645ddb64d27d4cfeea67da"
+    },
+    "inspection/components_front.png": {
+      "path": "assets/models/units/human_knight/inspection/components_front.png",
+      "bytes": 24426,
+      "sha256": "ada86b49c9b5306de71b712c1ea5f6425e6330457b04929577d5b4f189523893"
+    },
+    "inspection/components_side.png": {
+      "path": "assets/models/units/human_knight/inspection/components_side.png",
+      "bytes": 20886,
+      "sha256": "56727220e78651f3216dc791d87e8f0e877c7b6a201bfeb95b5262d5bfc3db7b"
+    },
+    "inspection/textures/image_0.png": {
+      "path": "assets/models/units/human_knight/inspection/textures/image_0.png",
+      "bytes": 2705592,
+      "sha256": "5f330ed6f38497c5ec093ad87ee9f201e72ce1cb63b19d93d83ecfbbb9cd57ec"
+    }
+  },
+  "limitations": [
+    "Connectivity uses spatial welding; close contact can merge separate surfaces.",
+    "Orthographic CPU previews are inspection views, not the provider preview; no normal maps or full PBR shader.",
+    "Skinning/deformation, exact physical thickness, self-intersections and Roblox import not validated.",
+    "Component identity (sword/shield/body) requires visual interpretation; no mesh edits performed."
+  ],
+  "manualInstructions": "assets/models/units/human_knight/REVIEW.md"
+}

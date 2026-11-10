@@ -1,0 +1,58 @@
+--!strict
+-- Explicit Studio-only isolated checks. No real match balances or world mutations.
+local EconomyService=require(script.Parent.EconomyService)
+local MatchService=require(script.Parent.MatchService)
+local Config=require(game:GetService("ReplicatedStorage").CastleFightShared.Config.GameConfig)
+local Tests={}
+function Tests.Run(): {passed: number, names: {string}}
+	assert(game:GetService("RunService"):IsStudio(),"E_STUDIO_ONLY")
+	local names: {string}={}
+	local function check(name: string,result: boolean): () assert(result,"FAIL: "..name); table.insert(names,name) end
+	local economy=EconomyService.new(Config,function(_: EconomyService.Faction,_: number): () end)
+	local states: {MatchService.Status}={}
+	local match=MatchService.new(economy,function(status: MatchService.Status,_: number): () table.insert(states,status) end)
+	check("waiting has zero gold",economy.GetGold("Human")==0 and match.GetStatus()=="Waiting")
+	match.Step(2); check("no waiting income",economy.GetGold("Human")==0)
+	check("inactive grants refused",not economy.AddGold("Human",6,"inactive",0))
+	check("inactive spend refused",not economy.TrySpendGold("Human",1,"inactive",0))
+	check("start succeeds",(match.Start()))
+	check("starting transition observed",states[1]=="Starting" and states[2]=="InProgress")
+	local epoch=match.GetMatchId()
+	check("both faction accounts start at 350",economy.GetGold("Human")==Config.startingGold and economy.GetGold("Undead")==Config.startingGold)
+	check("duplicate start refused",not match.Start())
+	match.Step(.5); check("no early income",economy.GetGold("Human")==350)
+	match.Step(.5); check("first second gives six",economy.GetGold("Human")==356)
+	match.Step(2); check("catch up two ticks",economy.GetGold("Human")==368 and economy.GetGold("Undead")==368)
+	check("afford exact balance",economy.CanAfford("Human",368))
+	check("cannot afford above balance",not economy.CanAfford("Human",369))
+	check("overdraft refused",not economy.TrySpendGold("Human",369,"overdraft",epoch))
+	check("overdraft preserves balance",economy.GetGold("Human")==368)
+	check("spend succeeds",(economy.TrySpendGold("Human",100,"purchase-1",epoch)))
+	check("repeat spend refused",not economy.TrySpendGold("Human",100,"purchase-1",epoch))
+	check("repeat cannot change amount",not economy.TrySpendGold("Human",5,"purchase-1",epoch))
+	check("only one debit",economy.GetGold("Human")==268)
+	check("debit to zero",(economy.TrySpendGold("Human",268,"purchase-2",epoch)))
+	check("balance never negative",economy.GetGold("Human")==0 and not economy.TrySpendGold("Human",1,"empty",epoch))
+	for index,value in {-1,0,0/0,math.huge} do check("invalid amount "..index,not economy.AddGold("Human",value,"invalid"..index,epoch)) end
+	check("stale match refused",not economy.AddGold("Human",1,"stale",epoch-1))
+	check("empty operation refused",not economy.AddGold("Human",1,"",epoch))
+	check("fractional amounts preserved",economy.AddGold("Human",265.2,"fraction",epoch) and economy.GetGold("Human")==265.2)
+	check("maximum balance clamp",economy.AddGold("Human",20000,"cap",epoch) and economy.GetGold("Human")==9999)
+	check("repeat credit refused",not economy.AddGold("Human",20000,"cap",epoch))
+	match.Step(3); check("income respects cap",economy.GetGold("Human")==9999)
+	check("faction balances independent",economy.GetGold("Undead")==386)
+	check("reset active match refused",not match.Reset())
+	check("finish succeeds",(match.Finish()))
+	check("finish resets both balances",economy.GetGold("Human")==0 and economy.GetGold("Undead")==0)
+	match.Step(10); check("no finished income",economy.GetGold("Human")==0)
+	check("finished add refused",not economy.AddGold("Human",6,"finished",epoch))
+	check("new match starts fresh",match.Start() and economy.GetGold("Human")==350)
+	check("new epoch",match.GetMatchId()==epoch+1)
+	check("old epoch receipt refused",not economy.TrySpendGold("Human",100,"purchase-1",epoch))
+	check("new match has independent ledger",(economy.TrySpendGold("Human",100,"purchase-1",epoch+1)))
+	match.Step(.9); match.Finish(); match.Start(); match.Step(.1)
+	check("partial second reset",economy.GetGold("Human")==350)
+	match.Finish(); check("return to waiting",match.Reset() and match.GetStatus()=="Waiting")
+	return {passed=#names,names=names}
+end
+return table.freeze(Tests)
